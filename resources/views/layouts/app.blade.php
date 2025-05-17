@@ -42,6 +42,9 @@
 
         @stack('modals')
 
+        
+        @livewireScripts
+
             
     <script>
         livewire.on('error', function(ms){
@@ -66,6 +69,5 @@
         })
     </script>
 
-        @livewireScripts
     </body>
 </html>
