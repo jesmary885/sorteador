@@ -53,24 +53,12 @@
     <script>
         document.addEventListener('livewire:init', () => {
         Livewire.on('error', (ms) => {
-            toastr.options={
-                "closeButton": true,
-                "debug": false,
-                "newestOnTop": true,
-                "progressBar": true,
-                "positionClass": "toast-top-right",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": "300",
-                "hideDuration": "1500",
-                "timeOut": "5000",
-                "extendedTimeOut": "1000",
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-            toastr.error(ms)
+            Swal.fire({
+            icon: "error",
+            title: "",
+            text: ms,
+            footer: '<a href="#">Why do I have this issue?</a>'
+            });
         });
     });
 
