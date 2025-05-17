@@ -11,16 +11,10 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-          
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-        @livewireScripts
-        <script src="{{ mix('js/app.js') }}" defer></script> 
-
         <!-- Scripts -->
-        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!-- Styles -->
         @livewireStyles
@@ -48,7 +42,9 @@
 
         @stack('modals')
 
+        @livewireScripts
 
+        @stack('script')
 
         
  
