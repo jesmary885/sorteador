@@ -53,11 +53,7 @@ class InicioSorteador extends Component
 
         else{
 
-            notyf()
-                ->position('x', 'center')
-                ->position('y', 'center')
-                ->dismissible(true)
-                ->addError('¡Fichas terminadas!');
+            $this->emit('error','Se han agotado los números!. Haz clic en Finalizar para generar más números');
 
         }
 
