@@ -56,8 +56,8 @@
             Swal.fire({
             icon: "error",
             title: "",
-            text: ms,
-            footer: '<a href="#">Why do I have this issue?</a>'
+            text: "Se han agotado los números!. Haz clic en Finalizar para generar más números",
+            footer: ''
             });
         });
     });

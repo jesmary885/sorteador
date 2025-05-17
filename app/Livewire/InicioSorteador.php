@@ -53,7 +53,7 @@ class InicioSorteador extends Component
 
         else{
 
-            $this->dispatch('error', ms: 'Se han agotado los números!. Haz clic en Finalizar para generar más números'); // Nuevo (Livewire 3.x)
+            $this->dispatch('error'); // Nuevo (Livewire 3.x)
 
          
 

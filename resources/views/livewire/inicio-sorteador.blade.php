@@ -26,41 +26,44 @@
 
         @if($iniciado == 1)
 
-        <div class="w-full flex  justify-center  mt-12 mb-6 ">
-            <div class="flex items-center flex-wrap w-full lg:w-1/4 px-10 bg-white shadow-xl rounded-2xl h-20"
-              x-data="{ circumference: 50 * 2 * Math.PI, percent: 100 }"
-              >
-              <div class="flex items-center justify-center -m-6 overflow-hidden bg-white rounded-full">
-                <svg class="w-32 h-32 transform translate-x-1 translate-y-1" x-cloak aria-hidden="true">
-                  <circle
-                    class="text-gray-300"
-                    stroke-width="10"
-                    stroke="currentColor"
-                    fill="transparent"
-                    r="50"
-                    cx="60"
-                    cy="60"
-                    />
-                  <circle
-                    class="text-blue-600"
-                    stroke-width="10"
-                    :stroke-dasharray="circumference"
-                    :stroke-dashoffset="circumference - percent / 100 * circumference"
-                    stroke-linecap="round"
-                    stroke="currentColor"
-                    fill="transparent"
-                    r="50"
-                    cx="60"
-                    cy="60"
-                  />
-                </svg>
-                <span class="absolute text-2xl text-blue-700 font-bold"> {{$letra}}</span>
-              </div>
-          
+          @if($numero != 0)
 
-            <span class="ml-auto text-2xl font-bold text-blue-600   ">{{$numero}}</span>
-          </div>
-        </div>
+            <div class="w-full flex  justify-center  mt-12 mb-6 ">
+                <div class="flex items-center flex-wrap w-full lg:w-1/4 px-10 bg-white shadow-xl rounded-2xl h-20"
+                  x-data="{ circumference: 50 * 2 * Math.PI, percent: 100 }"
+                  >
+                  <div class="flex items-center justify-center -m-6 overflow-hidden bg-white rounded-full">
+                    <svg class="w-32 h-32 transform translate-x-1 translate-y-1" x-cloak aria-hidden="true">
+                      <circle
+                        class="text-gray-300"
+                        stroke-width="10"
+                        stroke="currentColor"
+                        fill="transparent"
+                        r="50"
+                        cx="60"
+                        cy="60"
+                        />
+                      <circle
+                        class="text-blue-600"
+                        stroke-width="10"
+                        :stroke-dasharray="circumference"
+                        :stroke-dashoffset="circumference - percent / 100 * circumference"
+                        stroke-linecap="round"
+                        stroke="currentColor"
+                        fill="transparent"
+                        r="50"
+                        cx="60"
+                        cy="60"
+                      />
+                    </svg>
+                    <span class="absolute text-2xl text-blue-700 font-bold"> {{$letra}}</span>
+                  </div>
+              
+
+                <span class="ml-auto text-2xl font-bold text-blue-600   ">{{$numero}}</span>
+              </div>
+            </div>
+          @endif
 
       @endif
       </div>
