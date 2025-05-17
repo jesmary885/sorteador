@@ -42,7 +42,6 @@
 
         @stack('modals')
 
-        <script>
             
     <script>
         livewire.on('error', function(ms){
@@ -66,7 +65,6 @@
             toastr.error(ms)
         })
     </script>
-        </script>
 
         @livewireScripts
     </body>
