@@ -49,7 +49,8 @@
 
             
     <script>
-        livewire.on('error', function(ms){
+        document.addEventListener('livewire:init', () => {
+        Livewire.on('error', (ms) => {
             toastr.options={
                 "closeButton": true,
                 "debug": false,
@@ -68,7 +69,10 @@
                 "hideMethod": "fadeOut"
             }
             toastr.error(ms)
-        })
+        });
+    });
+
+    
     </script>
     </body>
 </html>
